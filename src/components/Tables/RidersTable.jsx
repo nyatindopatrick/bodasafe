@@ -11,6 +11,8 @@ const Table = ({ tableHeader, data, UI }) => {
     setNewData([...data]);
   }, [data]);
   console.log(data);
+
+  const randomRange = (min, max) => Math.floor(Math.random() * (max - min))+min;
   return (
     <>
       {!newData ? (
@@ -44,9 +46,9 @@ const Table = ({ tableHeader, data, UI }) => {
                     <td data-label="No.">{index + 1}</td>
                     <td data-label="Sacco">{sacco || name}</td>
                     <td data-label="Status">{status}</td>
-                    <td data-label="Riders">{ratings}</td>
-                    <td data-label="Location">{location}</td>
-                    <td data-label="Reports">{reports}</td>
+                    <td data-label="Riders">{ratings? ratings : 5}</td>
+                    <td data-label="Location">{location? location:"Nyalenda"}</td>
+                    <td data-label="Reports">{reports? reports.length: randomRange(1,20)}</td>
                     <td data-label="Actions">
                       <Button
                         className="deactivate_activate action_btn"

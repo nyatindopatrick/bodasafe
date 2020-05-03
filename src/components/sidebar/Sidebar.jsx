@@ -4,7 +4,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import MailIcon from '@material-ui/icons/Mail';
 import ListItemText from '@material-ui/core/ListItemText';
 import Person from '@material-ui/icons/Person';
-import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import { Link } from 'react-router-dom';
 
@@ -18,14 +17,6 @@ const mainListItems = (
         <ListItemText primary='Dashboard' />
       </ListItem>
     </Link>
-    {/* <Link to='/app/sacco'>
-      <ListItem button>
-        <ListItemIcon>
-          <PeopleIcon style={{color: "#ffff"}}/>
-        </ListItemIcon>
-        <ListItemText primary='Sacco' />
-      </ListItem>
-    </Link> */}
     <Link to='/app/riders'>
       <ListItem button>
         <ListItemIcon>
