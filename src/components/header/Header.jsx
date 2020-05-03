@@ -148,7 +148,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Header = () => {
+const Header = (props) => {
   // const [isOpen, setIsOpen] = useState(false);
 
   // const toggle = () => setIsOpen(!isOpen);
@@ -176,8 +176,9 @@ const Header = () => {
     setOpen(false);
   };
   const handleLogout = () => {
-    localStorage.removeItem('roles');
-    history.push('/');
+    console.log(props.handleSignOut)
+    localStorage.clear()
+    return window.location.assign('/');
   };
   return (
     <>

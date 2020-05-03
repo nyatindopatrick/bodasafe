@@ -26,18 +26,21 @@ const PrivateRoutes = props => {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <Navigation />
+      <Navigation logout = {props.handleSignOut}/>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Switch>
-          {allowedRoutes.map(route => (
+          {allowedRoutes.map(route =>{ 
+            
+            return (
             <Route
               exact
-              key={route.url}
-              component={Routes[route.component]}
+              key={route.url}            
               path={`/app${route.url}`}
+              component={Routes[route.component]}
             />
-          ))}
+          
+          )})}
           <Route component={NotFound} />
         </Switch>
       </main>

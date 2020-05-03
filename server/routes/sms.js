@@ -5,6 +5,7 @@ const { Sacco, Riders, Messages } = require('../models/data');
 router.post('/sms', (req, res) => {
   let { from, text } = req.body;
   let phoneNumber = from;
+  console.log(req.body)
   Riders.findOne({ plateNumber: text })
     .then(data => {
       let reply;
