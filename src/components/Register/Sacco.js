@@ -18,7 +18,7 @@ import {
 } from 'reactstrap';
 
 const SaccoRegister = () => {
-  const { inputs, handleInputChange, handleSubmit } = useSignUpForm(
+  const { inputs, handleInputChange } = useSignUpForm(
     handleSignup
   );
   const [message, setMessage] = useState();

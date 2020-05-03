@@ -17,7 +17,7 @@ import {
 } from 'reactstrap';
 
 const RiderRegister = () => {
-  const { inputs, handleInputChange, handleSubmit } = useSignUpForm(
+  const { inputs, handleInputChange } = useSignUpForm(
     handleSignup
   );
   const [message, setMessage] = useState();
